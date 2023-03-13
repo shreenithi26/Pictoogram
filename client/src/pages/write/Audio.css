@@ -1,0 +1,27 @@
+.audio {
+    display: flex;
+    margin-left: 180px;
+    background-color: rgba(174, 221, 244, 0);
+    
+}
+
+.rec{
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 20px;
+    height: 27px;
+    padding: 0px 10px;
+    background-color: teal;
+    color: white;
+    font-weight: 600;
+
+
+}
+
+.audiodiv{
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+}
+
