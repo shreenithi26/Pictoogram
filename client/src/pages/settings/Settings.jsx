@@ -30,11 +30,11 @@ export default function Settings() {
       data.append("file", file);
       updatedUser.profilePic = filename;
       try {
-        await axios.post(`${process.env.REACT_APP_URL}/upload`, data);
+        await axios.post(`https://pictogram-smjb.onrender.com/upload`, data);
       } catch (err) {}
     }
     try {
-      const res = await axios.put(`/${process.env.REACT_APP_URL}users/` + user._id, updatedUser);
+      const res = await axios.put(`https://pictogram-smjb.onrender.com/users/` + user._id, updatedUser);
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
     } catch (err) {

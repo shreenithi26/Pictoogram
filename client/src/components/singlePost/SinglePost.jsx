@@ -17,7 +17,7 @@ export default function SinglePost() {
 
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get(`${process.env.REACT_APP_URL}/posts/` + path);
+      const res = await axios.get(`https://pictogram-smjb.onrender.com/posts/` + path);
       setPost(res.data);
       setTitle(res.data.title);
       setDesc(res.data.desc);
@@ -27,7 +27,7 @@ export default function SinglePost() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`${process.env.REACT_APP_URL}/posts/${post._id}`, {
+      await axios.delete(`https://pictogram-smjb.onrender.com/posts/${post._id}`, {
         data: { username: user.username },
       });
       window.location.replace("/");
@@ -36,7 +36,7 @@ export default function SinglePost() {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`${process.env.REACT_APP_URL}/posts/${post._id}`, {
+      await axios.put(`https://pictogram-smjb.onrender.com/posts/${post._id}`, {
         username: user.username,
         title,
         desc,

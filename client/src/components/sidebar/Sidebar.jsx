@@ -8,7 +8,7 @@ export default function Sidebar() {
 
   useEffect(() => {
     const getCats = async () => {
-      const res = await axios.get(`${process.env.REACT_APP_URL}/categories`);
+      const res = await axios.get(`https://pictogram-smjb.onrender.com/categories`);
       setCats(res.data);
     };
     getCats();

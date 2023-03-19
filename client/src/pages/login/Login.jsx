@@ -13,7 +13,7 @@ export default function Login() {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post(`${process.env.REACT_APP_URL}/auth/login`, {
+      const res = await axios.post(`https://pictogram-smjb.onrender.com/auth/login`, {
         username: userRef.current.value,
         password: passwordRef.current.value,
       });

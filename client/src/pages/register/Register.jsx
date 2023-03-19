@@ -13,7 +13,7 @@ export default function Register() {
     e.preventDefault();
     setError(false);
     try {
-      const res = await axios.post(`${process.env.REACT_APP_URL}/auth/register`, {
+      const res = await axios.post(`https://pictogram-smjb.onrender.com/auth/register`, {
         username,
         email,
         password,
@@ -65,3 +65,5 @@ export default function Register() {
     </div>
   );
 }
+
+// ${process.env.REACT_APP_URL}/auth/register
