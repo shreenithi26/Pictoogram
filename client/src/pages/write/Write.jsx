@@ -38,7 +38,7 @@ export default function Write() {
       console.log("Image is going to be uploaded");
       try {
         const base64 = await convertBase64(file);
-        await axios.post(`https://pictogram-smjb.onrender.com/upload`, { image: base64 }).then((res) => {
+        await axios.post(`${process.env.REACT_APP_URL}/upload`, { image: base64 }).then((res) => {
           newPost.photo = res.data;
           console.log("Image Succesfully uploaded. The url is : ", res.data);
         });
@@ -49,7 +49,7 @@ export default function Write() {
     }
 
     try {
-      const res = await axios.post(`https://pictogram-smjb.onrender.com/posts`, newPost);
+      const res = await axios.post(`${process.env.REACT_APP_URL}/posts`, newPost);
       window.location.replace("/post/" + res.data._id);
     } catch (err) {}
   };
